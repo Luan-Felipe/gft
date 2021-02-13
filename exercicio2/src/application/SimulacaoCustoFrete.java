@@ -42,15 +42,12 @@ public class SimulacaoCustoFrete {
         cargas.add(c8);
         cargas.add(c9);
 
-        int contador = 0;
-
-        for (Carga carga:cargas) {
-            contador ++;
+        for (int contador = 0; contador < cargas.size(); contador++) {
             System.out.println("Para a carga " + contador);
-            if (vagao.calculaFrete(carga) < caminhao.calculaFrete(carga)){
-                System.out.print("a melhor opção de frete é o vagão, pelo preço de: $" + String.format("%.2f", vagao.calculaFrete(carga)) + "\n");
+            if (vagao.calculaFrete(cargas.get(contador)) < caminhao.calculaFrete(cargas.get(contador))){
+                System.out.print("a melhor opção de frete é o vagão, pelo preço de: $" + String.format("%.2f", vagao.calculaFrete(cargas.get(contador))) + "\n");
             }else{
-                System.out.print("a melhor opção de frete é o caminhão, pelo preço de $" + String.format("%.2f", caminhao.calculaFrete(carga)) + "\n");
+                System.out.print("a melhor opção de frete é o caminhão, pelo preço de $" + String.format("%.2f", caminhao.calculaFrete(cargas.get(contador))) + "\n");
             }
         }
 
