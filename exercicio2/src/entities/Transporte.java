@@ -7,8 +7,7 @@ public abstract class Transporte {
     }
 
     public double calculaFrete(Carga carga){
-        double resultado = 0;
-        return resultado;
+        return 0;
     }
 
 }
